@@ -8,7 +8,7 @@
 //     current or next upcoming year.
 //     Format: "Month Day, Year HH:MM:SS"
 // ══════════════════════════════════════════
-const BIRTHDAY_DATE = "June 29, 2025 00:00:00";
+const BIRTHDAY_DATE = "June 5, 2026 00:00:00";
 
 const daysEl    = document.getElementById('days');
 const hoursEl   = document.getElementById('hours');
