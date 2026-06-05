@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, My Love 💜</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Pinyon+Script&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="petals-container" id="petals"></div>
+  <div class="bg-overlay"></div>
+
+  <section class="screen" id="countdown-screen">
+    <div class="glass-card">
+      <p class="eyebrow">counting down to</p>
+      <h1 class="script-title">Your Special Day</h1>
+      <p class="subtitle">Something beautiful is waiting for you&hellip;</p>
+
+      <div class="timer-grid">
+        <div class="timer-block">
+          <span class="timer-num" id="days">00</span>
+          <span class="timer-label">Days</span>
+        </div>
+        <div class="timer-sep">:</div>
+        <div class="timer-block">
+          <span class="timer-num" id="hours">00</span>
+          <span class="timer-label">Hours</span>
+        </div>
+        <div class="timer-sep">:</div>
+        <div class="timer-block">
+          <span class="timer-num" id="minutes">00</span>
+          <span class="timer-label">Minutes</span>
+        </div>
+        <div class="timer-sep">:</div>
+        <div class="timer-block">
+          <span class="timer-num" id="seconds">00</span>
+          <span class="timer-label">Seconds</span>
+        </div>
+      </div>
+
+      <div id="unlock-area" class="unlock-area hidden">
+        <p class="unlock-msg">✨ The moment has arrived, my love ✨</p>
+        <a href="gallery.html" class="wish-btn">
+          <span>Open Your Gift</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      
+    </div>
+  </section>
+
+  
+  <audio id="bg-music" loop>
+    <source src="photos/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" id="music-btn" onclick="toggleMusic()">♪</button>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('music-btn');
+
+    // Autoplay on first user interaction
+    document.addEventListener('click', () => { audio.play(); }, { once: true });
+
+    function toggleMusic() {
+      if (audio.paused) { audio.play(); btn.textContent = '♪'; }
+      else { audio.pause(); btn.textContent = '♩'; }
+    }
+  </script>
+
+  <script src="js/countdown.js"></script>
+</body>
+</html>
