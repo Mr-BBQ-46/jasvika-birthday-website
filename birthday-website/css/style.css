@@ -221,7 +221,7 @@ body {
 .unlock-msg {
   font-family: var(--font-serif);
   font-style: italic;
-  color: var(--purple);
+  color: var(--blue);
   font-size: 1.08rem;
   margin-bottom: 24px;
   letter-spacing: 0.04em;
